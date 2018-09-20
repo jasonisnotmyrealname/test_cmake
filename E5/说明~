@@ -1,0 +1,5 @@
+本项目用于cmake的学习。
+和E4相比，libhello自成一个文件夹，main.c放到src文件夹中。
+此时需要由3个CMakeLists.txt，顶层的通过add_directory找到底层。
+
+cmake过程中在build文件夹下面也会产生libhello和src两个文件夹。

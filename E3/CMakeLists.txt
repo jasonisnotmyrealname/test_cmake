@@ -1,0 +1,13 @@
+#设定cmake最低版本，important
+cmake_minimum_required(VERSION 2.8)
+#设定project名字
+project(hehe)
+#设定变量，如果多个文件，可以罗列，比如set(SRC_LIST main.c hello.c)。不需要列出.h文件。
+set(LIB_SRC hello.c)
+set(APP_SRC main.c)
+#add库和可执行文件
+add_library(libhello STATIC ${LIB_SRC})
+#set_target_properties(libhello PROPERTIES OUTPUT_NAME "hello") #这句话将libhello重新命名为hello.a，但是不起作用
+add_executable(hello ${APP_SRC})
+#设置link,第一个参数是target
+target_link_libraries(hello libhello)  

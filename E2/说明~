@@ -1,0 +1,15 @@
+本项目用于cmake的学习。
+1.首先新建一个main.c
+2.编写CMakeLists.txt，注意大小写(否则cmake时会报错：找不到CMakeLists.txt)。
+3.编写完后新建一个目录（比如build）用来放CMakeFiles、CMakeCache.txt、cmake_install.cmake等文件。
+目录结构：
++
+|
++------main.c
++------CMakeLists.txt
+|
+/--+build/
+   |
+   +-----hello
+4.在build目录下执行cmake ..。其中..表示上一层目录。
+
